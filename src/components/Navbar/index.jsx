@@ -69,7 +69,7 @@ export default function Navbar() {
             variant="h6"
             noWrap
             component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' , color:'rgb(156, 233, 41)'} }}
+            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' , color:'rgb(153, 255, 0)'} }}
           >
             POKEDEX
           </Typography>
@@ -78,7 +78,7 @@ export default function Navbar() {
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
-              placeholder="Search…"
+              placeholder="Pesquisando…"
               inputProps={{ 'aria-label': 'search' }}
             />
           </Search>
