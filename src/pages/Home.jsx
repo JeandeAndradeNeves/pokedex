@@ -19,7 +19,7 @@ export default function Home() {
 //Função que pega o valor de dentro da URL
 const getPokemon = () => {
   let endpoints = [];
-  for (let i = 1;i <= 50;i++) {
+  for (let i = 1;i <= 54;i++) {
   endpoints.push(`https://pokeapi.co/api/v2/pokemon/${i}/`);
   };    
   axios.all(endpoints.map((endpoint) => axios.get(endpoint))).then((res) => setPokemons(res));
@@ -31,6 +31,9 @@ const getPokemon = () => {
 //Função que filtra o pokemon pesquisado e mostra na tela.
 const pokemonFilter = (name) => {
   let filteredPokemons = [];
+  if(!name){
+    getPokemon();
+  }
   for(let i in pokemons){
     if(pokemons[i].data.name.includes(name)){
        filteredPokemons.push(pokemons[i]);
@@ -46,7 +49,7 @@ const pokemonFilter = (name) => {
         <Grid container spacing={2}>
           {pokemons.map((pokemon,key) => (
             <Grid item xs={2} key={key}>
-            <PokemonCard name={pokemon.data.name} image={pokemon.data.sprites.front_default}/>
+            <PokemonCard name={pokemon.data.name} image={pokemon.data.sprites.front_default} types={pokemon.data.types}/>
             </Grid>
           ))}
         </Grid>

@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
+import Navigation from '../Navegation';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -64,8 +65,9 @@ export default function Navbar({pokemonFilter}) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-            
+           <Navigation/>
           </Typography>
+          
 
           <Search sx={{ marginTop:1 }} onChange={(e) => pokemonFilter(e.target.value)}>
             <SearchIconWrapper>
