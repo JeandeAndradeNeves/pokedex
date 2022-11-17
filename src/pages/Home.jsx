@@ -48,7 +48,7 @@ const pokemonFilter = (name) => {
       <Container maxWidth='xl'>
         <Grid container spacing={2}>
           {pokemons.map((pokemon,key) => (
-            <Grid item xs={2} key={key}>
+            <Grid item xs={6} sm={4} md={3} lg={2} key={key}>
             <PokemonCard name={pokemon.data.name} image={pokemon.data.sprites.front_default} types={pokemon.data.types}/>
             </Grid>
           ))}

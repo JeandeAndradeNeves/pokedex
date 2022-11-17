@@ -11,14 +11,14 @@ export default function PokemonCard({name,image,types}) {
 //Função para retornar um tipo do pokemon ou dois tipos.
   const typeHandler = () => {
     if(types[1]){
-      return types[0].type.name + " " + types[1].type.name
+      return types[0].type.name + " | " + types[1].type.name
     }else{
-      return types[0].type.name
+      return types[0].type.name 
     }
     
   }
   return (
-    <Card sx={{ margin:1,padding:1,backgroundColor:'rgb(68, 216, 172)'}}>
+    <Card sx={{ margin:1,padding:1,backgroundColor:'rgb(68, 216, 172)',height:400}}>
       <CardMedia
         component="img"
         height="200"
@@ -33,9 +33,8 @@ export default function PokemonCard({name,image,types}) {
           {typeHandler()}
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="small" sx={{ backgroundColor:'rgb(14, 89, 124)', color:'black',margin:1}}>FAVORITO</Button>
-        <Button size="small" sx={{ backgroundColor:'rgb(255, 66, 66)', color:'black'}}>EXCLUIR</Button>
+      <CardActions sx={{ }}>
+        <Button size="small" sx={{ backgroundColor:'rgb(14, 89, 124)', color:'black',margin:3,marginBottom:10}}>ADD AOS FAVORITOS</Button>
       </CardActions>
     </Card>
   );
