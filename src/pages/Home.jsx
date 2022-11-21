@@ -40,7 +40,7 @@ const pokemonFilter = (name) => {
     }
   }
   setPokemons(filteredPokemons);
-}
+};
 
   return (
     <>
@@ -57,3 +57,5 @@ const pokemonFilter = (name) => {
     </>
   )
 };
+
+

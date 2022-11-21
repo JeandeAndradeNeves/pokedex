@@ -18,7 +18,7 @@ export default function PokemonCard({name,image,types}) {
     
   }
   return (
-    <Card sx={{ margin:1,padding:1,backgroundColor:'rgb(68, 216, 172)',height:400}}>
+    <Card sx={{ margin:1,padding:1,backgroundColor:'rgb(68, 216, 172)',height:300}}>
       <CardMedia
         component="img"
         height="200"
@@ -33,9 +33,6 @@ export default function PokemonCard({name,image,types}) {
           {typeHandler()}
         </Typography>
       </CardContent>
-      <CardActions sx={{ }}>
-        <Button size="small" sx={{ backgroundColor:'rgb(14, 89, 124)', color:'black',margin:3,marginBottom:10}}>ADD AOS FAVORITOS</Button>
-      </CardActions>
     </Card>
   );
 }
